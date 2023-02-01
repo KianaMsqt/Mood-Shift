@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+
+.hero {
+    font-family: 'Happy Monkey', cursive;
+    line-height: 1.5;
+}
+/* Jumbotron Styling */
+.jumbo-style  {
+    height: 100vh;
+    width: 100%;
+    background: #8bf0ba !important;
+    color: #333;
+    position: relative;
+    display: flex;
+    align-items: center ;
+    text-align: center;
+    padding: 0 20px;
+
+}
+
+.btn-group {
+    width: 90%;
+    margin: auto;
+    
+
+}
