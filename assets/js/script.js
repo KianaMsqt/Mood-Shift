@@ -1,12 +1,13 @@
+var inputQuery = "Meditation";
+
 // TODO: Add id #youtube to the element that will create in the page for video content
 $( '#youtube' ).on( 'click', function( e ) {
     e.preventDefault();
     
-    var inputQuery = "Meditation",
-        apiKey = "AIzaSyDC1IfJn2liffdgTxvXNLpHKPTRKS41WU8",
+    var youtubeAPIKey = "AIzaSyDC1IfJn2liffdgTxvXNLpHKPTRKS41WU8",
         youtubeQueryURL;
 
-    youtubeQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + inputQuery + "&type=video&key=" + apiKey;
+    youtubeQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + inputQuery + "&type=video&key=" + youtubeAPIKey;
 
     // AJAX call to the YouTube Data API 
     $.ajax( {
@@ -18,7 +19,7 @@ $( '#youtube' ).on( 'click', function( e ) {
 
             var items = data.items;
 
-            for (var i = 0; i < items.length; i++) {
+            for ( var i = 0; i < items.length; i++ ) {
 
                 var videoId = items[i].id.videoId,
                     videoTitle = items[i].snippet.title;
@@ -30,6 +31,38 @@ $( '#youtube' ).on( 'click', function( e ) {
             }
 
         }
+
     } );
+
+} );
+
+$( '#wikipedia' ).on( 'click', function( e ) {
+    e.preventDefault();
+
+    $.ajax({
+        url: "https://en.wikipedia.org/w/api.php",
+        data: {
+          action: "query",
+          list: "search",
+          srsearch: inputQuery,
+          format: "json"
+        },
+        dataType: "jsonp",
+
+        success: function(response) {
+
+            var results = response.query.search;
+
+          for (var i = 0; i < 3 && i < results.length; i++) {
+            var result = results[i];
+            var articleTitle = encodeURIComponent(result.title);
+
+            // Create HTML element
+            $("body").append("<h3><a href='https://en.wikipedia.org/wiki/" + articleTitle + "'>" + result.title + "</a></h3>");
+            $("body").append("<p>" + result.snippet + "</p>");
+          }
+        }
+
+    });
 
 } );
