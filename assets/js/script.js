@@ -1,4 +1,4 @@
-var inputQuery = "Meditation";
+var inputQuery = "Guided Meditation";
 
 // TODO: Add id #youtube to the element that will create in the page for video content
 $( '#youtube' ).on( 'click', function( e ) {
@@ -61,6 +61,34 @@ $( '#wikipedia' ).on( 'click', function( e ) {
             $("body").append("<h3><a href='https://en.wikipedia.org/wiki/" + articleTitle + "'>" + result.title + "</a></h3>");
             $("body").append("<p>" + result.snippet + "</p>");
           }
+        }
+
+    });
+
+} );
+
+$( '#deezer' ).on( 'click', function( e ) {
+    e.preventDefault();
+
+    $.ajax({
+        url: "https://api.deezer.com/search/track",
+        data: {
+          q: inputQuery,
+          limit: 3,
+          output: "json"
+        },
+        success: function( response ) {
+            var tracks = response.data;
+            for ( var i = 0; i < tracks.length; i++ ) {
+                var track = tracks[i];
+
+                // Create HTML element and embed the deezer widget
+                $("body").append("<h3>" + track.title + "</h3>");
+                $("body").append("<p>" + track.artist.name + "</p>");
+                var audioEmbed = '<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/' + track.id + '" width="250" height="250" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>';
+                $( "body" ).append( audioEmbed );
+            }
+
         }
 
     });
