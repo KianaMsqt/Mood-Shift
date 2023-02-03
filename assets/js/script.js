@@ -1,17 +1,10 @@
+// Smooth scroll to card content
+
 // Homepage Button Event
 
 $('#unhappy').on('click', function () {
   // Change background colour on click
   $('.jumbo-style').css('background-color', '#39a0ca');
-
-  // Smooth scroll to card content
-  //   const destination = $("a[name='" + selector + "']");
-  //   $('html,body').animate(
-  //     {
-  //       scrollTop: destination.offset().top,
-  //     },
-  //     'slow'
-  //   );
 
   // Reveal content cards
   $('div.to-show').show();
