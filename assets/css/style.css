@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 .hero {
     font-family: 'Happy Monkey', cursive;
     line-height: 1.5;
@@ -8,7 +13,7 @@
 .jumbo-style  {
     height: 100vh;
     width: 100%;
-    background: #8bf0ba !important;
+    background: #8bf0ba ;
     color: #333;
     position: relative;
     display: flex;
@@ -21,6 +26,31 @@
 .btn-group {
     width: 90%;
     margin: auto;
-    
+    }
 
+    /* Card Styling */
+
+.card-reveal {
+    background: #333 !important;
+}
+
+.card-hero {
+    color:#f43a09 ;
+}
+
+.card-container {
+ margin: auto;
+width: 90%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.card-content {
+    margin: 0 20px;
+}
+
+.to-show {
+    display: none;
+    flex-direction: row;
 }

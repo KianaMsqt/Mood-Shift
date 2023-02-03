@@ -11,29 +11,146 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Moodshifr</title>
+    <title>Moodshift</title>
   </head>
   <body>
-
+    <!-- Jumbotron -->
     <div class="jumbotron jumbo-style">
       <div class="container">
-      <header class="hero">
-      <h1 class="display-4">How do you feel?</h1>
-    </header>
-      <p class="lead">Let's Change Your Mood!</p>
-      <hr class="my-4">
-      <p class="">Choose Your Current Mood.</p>
-      <p class="lead">
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center btn-group" >
-          <button type="button" class="btn btn-outline-secondary btn-lg">:( Unhappy</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg">:'( Sad</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg">:) Normal</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg">=) Good</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg">=D Happy</button>
+        <header class="hero">
+          <h1 class="display-4">How do you feel?</h1>
+        </header>
+        <p class="lead">Let's Change Your Mood!</p>
+        <hr class="my-4" />
+        <p class="mood">Choose Your Current Mood.</p>
+
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center btn-group">
+          <button
+            type="button"
+            class="btn btn-outline-secondary btn-lg"
+            id="unhappy"
+            href="#unhappy-card"
+          >
+            :( Unhappy
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-outline-secondary btn-lg"
+            id="sad"
+            href="#sad-card"
+          >
+            :'( Sad
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-outline-secondary btn-lg"
+            id="normal"
+            href="#normal-card"
+          >
+            :) Normal
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-outline-secondary btn-lg"
+            id="good"
+            href="#good-card"
+          >
+            =) Good
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-outline-secondary btn-lg"
+            id="happy"
+            href="#happy-card"
+          >
+            =D Happy
+          </button>
         </div>
-      </p>
+      </div>
     </div>
-  </div>
+
+    <!-- Content Cards -->
+
+    <div id="card-reveal" class="card-reveal">
+      <div class="card-container to-show">
+        <header>
+          <h1 class="hero card-hero">Pick some content based on your mood.</h1>
+        </header>
+
+        <div
+          class="card text-white bg-secondary mb-3 card-content"
+          style="max-width: 18rem"
+          id="unhappy-card"
+        >
+          <div class="card-header">Feeling Gray?</div>
+          <div class="card-body">
+            <h5 class="card-title">We can fix that!</h5>
+            <p class="card-text">Here's some content to improve your mood!</p>
+            <button type="button" class="btn btn-primary">API Call</button>
+          </div>
+        </div>
+
+        <div
+          class="card text-white bg-success mb-3 card-content"
+          style="max-width: 18rem"
+          id="good-card"
+        >
+          <div class="card-header">Feeling great?</div>
+          <div class="card-body">
+            <h5 class="card-title">More where that came from!</h5>
+            <p class="card-text">
+              We have content to keep the good vibes flowing!
+            </p>
+            <button type="button" class="btn btn-primary">API Call</button>
+          </div>
+        </div>
+
+        <div
+          class="card text-white bg-danger mb-3 card-content"
+          style="max-width: 18rem"
+          id="sad-card"
+        >
+          <div class="card-header">Rough Day?</div>
+          <div class="card-body">
+            <h5 class="card-title">A quick Dopamine hit</h5>
+            <p class="card-text">
+              A selection of content to turn things around.
+            </p>
+            <button type="button" class="btn btn-primary">API Call</button>
+          </div>
+        </div>
+
+        <div
+          class="card text-white bg-warning mb-3 card-content"
+          style="max-width: 18rem"
+          id="normal-card"
+        >
+          <div class="card-header">Room for improvement?</div>
+          <div class="card-body">
+            <h5 class="card-title">A push in the right direction</h5>
+            <p class="card-text">For when you need a little pick-me-up</p>
+            <button type="button" class="btn btn-primary">API Call</button>
+          </div>
+        </div>
+
+        <div
+          class="card text-white bg-info mb-3 card-content"
+          style="max-width: 18rem"
+          id="happy-card"
+        >
+          <div class="card-header">Need a laugh</div>
+          <div class="card-body">
+            <h5 class="card-title">LMAO.</h5>
+            <p class="card-text">Let us show you something hilarious.</p>
+            <button type="button" class="btn btn-primary">API Call</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -45,6 +162,6 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
