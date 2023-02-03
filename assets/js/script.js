@@ -47,24 +47,26 @@ $('#happy').on('click', function () {
 
   $('div.to-show').show();
 });
+
 $( document ).ready( function() {
 
     // Storing user's mood and date on local storage.
-    $( "#saveButton" ).click( function() {
+    $( ".btn-feeling" ).on( 'click', function() {
 
         // Storing current date
         var date = new Date();
-        var text = $( "#textInput" ).val();
+        var mood = $( this ).text();
 
         localStorage.setItem( "date", date );
-        localStorage.setItem( "text", text );
+        localStorage.setItem( "text", mood );
+
 
     } );
 
     // Format the date to Day dd/mm/yyyy hh:mm:ss
     // eg: Thursday 01/01/1970 01:00:00
     var formatDate = function() {
-        var date = new Date(localStorage.getItem("date"));
+        var date = new Date(localStorage.getItem( "date" ));
         var formattedDate = date.toLocaleDateString();
         var formattedTime = date.toLocaleTimeString();
         var day = date.toLocaleString('default', { weekday: 'long' });
@@ -78,6 +80,7 @@ $( document ).ready( function() {
     $( '#moodTracker' ).on( 'click', function( e ) {
         e.preventDefault();
         $( 'body' ).append( formatDate() );
+        $( 'body' ).append( localStorage.getItem( "mood" ) );
     });
 
 } );
