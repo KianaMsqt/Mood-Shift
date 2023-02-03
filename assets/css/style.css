@@ -1,0 +1,16 @@
+.header{
+    height:400px;
+    background-image: url(background.avif);
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+p {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
