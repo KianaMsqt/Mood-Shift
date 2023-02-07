@@ -72,26 +72,99 @@ $( document ).ready( function() {
 
   } );
 
+} );
 
-    // Show stored data on the page
 
-    // TODO: It would be on click if we want to show it on a modal 
-    // Or should be on document ready if we wwant to show it on another page. In this case we need to check if the elemnt is on the page or not, to prevent errors on the home page.
-    $( '#moodTracker' ).on( 'click', function( e ) {
+var inputQuery = "Guided Meditation";
 
-      // Prevent redirecting page after clicking on the button
-      e.preventDefault();
+// TODO: Add id #youtube to the element that will create in the page for video content
+$( '#youtube' ).on( 'click', function( e ) {
+    e.preventDefault();
+    
+    var youtubeAPIKey = "AIzaSyDC1IfJn2liffdgTxvXNLpHKPTRKS41WU8",
+        youtubeQueryURL;
 
-        const displayData = $( "#displayTracker" );
+    youtubeQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + inputQuery + "&type=video&key=" + youtubeAPIKey;
 
-        // Iterate over all the keys in the local storage, get the values associated with each key, and parse them from JSON using
-        for ( let i = 0; i < localStorage.length; i++ ) {
-          const key = localStorage.key( i );
-          const value = JSON.parse( localStorage.getItem( key ) );
+    // AJAX call to the YouTube Data API 
+    $.ajax( {
+        url: youtubeQueryURL,
+        method: "GET",
 
-          const p = $( "<p>" ).html( `You were ${ value.text } at ${ value.dayOfWeek } ${ value.date } ${ value.time }.` );
+        // Extract the video ID and title of each video In the success callback function through loop
+        success: function( data ) {
 
-          displayData.append( p );
+            var items = data.items;
+
+            for ( var i = 0; i < items.length; i++ ) {
+
+                var videoId = items[i].id.videoId,
+                    videoTitle = items[i].snippet.title;
+
+                // Create HTML element and embed the video
+                var videoEmbed = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                $("body").append("<h3>" + videoTitle + "</h3>" + videoEmbed);
+
+            }
+
+        }
+
+    } );
+
+} );
+
+$( '#wikipedia' ).on( 'click', function( e ) {
+    e.preventDefault();
+
+    $.ajax({
+        url: "https://en.wikipedia.org/w/api.php",
+        data: {
+          action: "query",
+          list: "search",
+          srsearch: inputQuery,
+          format: "json"
+        },
+        dataType: "jsonp",
+
+        success: function(response) {
+
+            var results = response.query.search;
+
+          for (var i = 0; i < 3 && i < results.length; i++) {
+            var result = results[i];
+            var articleTitle = encodeURIComponent(result.title);
+
+            // Create HTML element
+            $("body").append("<h3><a href='https://en.wikipedia.org/wiki/" + articleTitle + "'>" + result.title + "</a></h3>");
+            $("body").append("<p>" + result.snippet + "</p>");
+          }
+        }
+
+    });
+
+} );
+
+$( '#deezer' ).on( 'click', function( e ) {
+    e.preventDefault();
+
+    $.ajax({
+        url: "https://api.deezer.com/search/track",
+        data: {
+          q: inputQuery,
+          limit: 3,
+          output: "json"
+        },
+        success: function( response ) {
+            var tracks = response.data;
+            for ( var i = 0; i < tracks.length; i++ ) {
+                var track = tracks[i];
+
+                // Create HTML element and embed the deezer widget
+                $("body").append("<h3>" + track.title + "</h3>");
+                $("body").append("<p>" + track.artist.name + "</p>");
+                var audioEmbed = '<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/' + track.id + '" width="250" height="250" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>';
+                $( "body" ).append( audioEmbed );
+            }
 
         }
 
