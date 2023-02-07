@@ -54,3 +54,22 @@ justify-content: center;
     display: none;
     flex-direction: row;
 }
+
+
+/* TODO: @Shaz Please use a different selector to prevent applying changes on index file */
+.header{
+    height:400px;
+    background-image: url(background.avif);
+}
+
+#mood-tracker-heading {
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+#mood-tracker-p-tag {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
