@@ -88,3 +88,11 @@ justify-content: center;
 .mood-tracker strong {
     font-size: 1.2;
 }
+
+/* Add custom style for the buttons showing in the header */
+.header-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+}
