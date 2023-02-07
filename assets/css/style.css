@@ -62,14 +62,14 @@ justify-content: center;
     background-image: url(background.avif);
 }
 
-h1 {
+#mood-tracker-heading {
     text-align: center;
     padding-top: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
 
-p {
+#mood-tracker-p-tag {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
