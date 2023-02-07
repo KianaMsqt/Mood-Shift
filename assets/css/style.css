@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero {
+    font-family: 'Happy Monkey', cursive;
+    line-height: 1.5;
+}
+/* Jumbotron Styling */
+.jumbo-style  {
+    height: 100vh;
+    width: 100%;
+    background: #8bf0ba ;
+    color: #333;
+    position: relative;
+    display: flex;
+    align-items: center ;
+    text-align: center;
+    padding: 0 20px;
+
+}
+
+.btn-group {
+    width: 90%;
+    margin: auto;
+    }
+
+    /* Card Styling */
+
+.card-reveal {
+    background: #333 !important;
+}
+
+.card-hero {
+    color:#f43a09 ;
+}
+
+.card-container {
+ margin: auto;
+width: 90%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.card-content {
+    margin: 0 20px;
+}
+
+.to-show {
+    display: none;
+    flex-direction: row;
+}
+
+.header{
+    height:400px;
+    background-image: url(background.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mood-tracker-page {
+    background-color: #c6ebfc;
+}
+
+#mood-tracker-heading {
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+#mood-tracker-p-tag {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mood-tracker {
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    font-family: 'Happy Monkey', cursive;
+}
+
+.mood-tracker strong {
+    font-size: 1.2;
+}
+
+/* Add custom style for the buttons showing in the header */
+.header-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+}
