@@ -43,6 +43,10 @@ h1 {
     text-align: center;
 }
 
+#audioContainer .card {
+    border: none;
+}
+
 .card-reveal {
     background: #c6ebfc;
 }
