@@ -10,6 +10,11 @@ html {
     line-height: 1.5;
 
 }
+
+h1 {
+    text-align: center;
+}
+
 /* Jumbotron Styling */
 .jumbo-style  {
     height: 100vh;
@@ -27,12 +32,19 @@ html {
 .btn-group {
     width: 90%;
     margin: auto;
-    }
+}
 
-    /* Card Styling */
+/* Card Styling */
+
+
+#articleContainer .card {
+    border: 3px dashed #c6ebfc;
+    padding: 2rem;
+    text-align: center;
+}
 
 .card-reveal {
-    background: #333 !important;
+    background: #c6ebfc;
 }
 
 .card-hero {
@@ -56,8 +68,14 @@ flex-wrap: wrap;
     margin: 0 20px;
 }
 
-.to-show {
+.to-show-step-2,
+.to-show-step-3 {
     display: none;
+    height: 100vh;
+}
+
+.to-show {
+    display: flex;
     flex-direction: row;
 }
 
@@ -66,6 +84,7 @@ flex-wrap: wrap;
     background-image: url(background.avif);
     background-size: cover;
     background-repeat: no-repeat;
+    text-align: center;
 }
 
 .mood-tracker-page {

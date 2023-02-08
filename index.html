@@ -73,13 +73,11 @@
 
     <!-- Content Cards -->
 
-    <div id="card-reveal" class="card-reveal mb-0">
+    <div id="card-reveal" class="card-reveal mb-0 to-show-step-2">
       <header>
-        <div class="to-show">
-          <h1 class="hero card-hero">
-            Step 1: Pick content you like the sound of.
-          </h1>
-        </div>
+        <h1 class="hero card-hero">
+          Step 1: Pick content you like the sound of.
+        </h1>
       </header>
 
       <div class="card-container to-show">
@@ -92,7 +90,7 @@
           <div class="card-body">
             <h5 class="card-title">We can fix that!</h5>
             <p class="card-text">Here's some content to improve your mood!</p>
-            <button type="button" class="btn btn-primary">API Call</button>
+            <button type="button" class="btn btn-primary btn-result">Show Me!</button>
           </div>
         </div>
 
@@ -107,7 +105,7 @@
             <p class="card-text">
               We have content to keep the good vibes flowing!
             </p>
-            <button type="button" class="btn btn-primary">API Call</button>
+            <button type="button" class="btn btn-primary btn-result">Show Me!</button>
           </div>
         </div>
 
@@ -122,7 +120,7 @@
             <p class="card-text">
               A selection of content to turn things around.
             </p>
-            <button type="button" class="btn btn-primary">API Call</button>
+            <button type="button" class="btn btn-primary btn-result">Show Me!</button>
           </div>
         </div>
 
@@ -135,7 +133,7 @@
           <div class="card-body">
             <h5 class="card-title">A push in the right direction</h5>
             <p class="card-text">For when you need a little pick-me-up</p>
-            <button type="button" class="btn btn-primary">API Call</button>
+            <button type="button" class="btn btn-primary btn-result">Show Me!</button>
           </div>
         </div>
 
@@ -148,26 +146,23 @@
           <div class="card-body">
             <h5 class="card-title">LMAO.</h5>
             <p class="card-text">Let us show you something hilarious.</p>
-            <button type="button" class="btn btn-primary">
-              <a href="#multimedia"></a>
-              API Call
-            </button>
+            <button type="button" class="btn btn-primary btn-result">Show Me!</button>
           </div>
         </div>
       </div>
     </div>
 
     <!-- User Multimedia Selection -->
-    <div id="multimedia" class="multimedia mb-0 to-show">
+    <div id="multimedia" class="multimedia mb-0 to-show-step-3">
       <header>
         <h1 class="hero multi-hero">
           Step 2: Select a type of content to improve your mood.
         </h1>
       </header>
-      <div class="mm-container">
-        <a href="#" class="badge badge-success btn-lrg">Gif</a>
-        <a href="#" class="badge badge-danger btn-lrg">Video</a>
-        <a href="#" class="badge badge-warning btn-lrg">Article</a>
+      <div class="mm-container to-show">
+        <a href="audio.html" class="badge badge-success btn-lrg">Audio</a>
+        <a href="video.html" class="badge badge-danger btn-lrg">Video</a>
+        <a href="article.html" class="badge badge-warning btn-lrg">Article</a>
       </div>
     </div>
 
