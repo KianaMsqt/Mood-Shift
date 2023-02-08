@@ -182,23 +182,4 @@ $('#deezer').on('click', function (e) {
     },
   });
 });
-// TODO: It would be on click if we want to show it on a modal
-// Or should be on document ready if we wwant to show it on another page. In this case we need to check if the elemnt is on the page or not, to prevent errors on the home page.
-$('#moodTracker').on('click', function (e) {
-  // Prevent redirecting page after clicking on the button
-  e.preventDefault();
 
-  const displayData = $('#displayTracker');
-
-  // Iterate over all the keys in the local storage, get the values associated with each key, and parse them from JSON using
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    const value = JSON.parse(localStorage.getItem(key));
-
-    const p = $('<p>').html(
-      `You were ${value.text} at ${value.dayOfWeek} ${value.date} ${value.time}.`
-    );
-
-    displayData.append(p);
-  }
-});
