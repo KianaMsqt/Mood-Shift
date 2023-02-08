@@ -8,6 +8,7 @@ html {
 .hero {
     font-family: 'Happy Monkey', cursive;
     line-height: 1.5;
+
 }
 /* Jumbotron Styling */
 .jumbo-style  {
@@ -44,6 +45,11 @@ width: 90%;
 display: flex;
 align-items: center;
 justify-content: center;
+flex-wrap: wrap;
+}
+
+.card-body {
+    height: 200px;
 }
 
 .card-content {
@@ -95,4 +101,34 @@ justify-content: center;
     top: 15px;
     right: 15px;
     z-index: 2;
+    
+}
+
+/* Badge Styling */
+
+.multi-hero{
+    color: #F7C331 !important;
+}
+
+.multimedia {
+   background:  #7d3cff 
+}
+
+.mm-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.btn-lrg {
+    font-size: 2rem;
+    margin: 50px;
+    color: #fff;
+}
+
+.btn-lrg:hover {
+    color: #333 !important;
 }
