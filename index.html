@@ -14,9 +14,8 @@
     <title>Moodshift</title>
   </head>
   <body>
-
-    <a href="mood-tracker.html" title="Mood Tracker" class="header-button btn btn-dark" id="moodTracker">Mood Tracker</a>
-    
+    <a href="mood-tracker.html" title="Mood Tracker" class="header-button btn btn-dark">Mood Tracker</a>
+  
     <!-- Jumbotron -->
     <div class="jumbotron jumbo-style mb-0">
       <div class="container">
@@ -73,12 +72,16 @@
 
     <!-- Content Cards -->
 
-    <div id="card-reveal" class="card-reveal">
-      <div class="card-container to-show">
-        <header>
-          <h1 class="hero card-hero">Pick some content based on your mood.</h1>
-        </header>
+    <div id="card-reveal" class="card-reveal mb-0">
+      <header>
+        <div class="to-show">
+          <h1 class="hero card-hero">
+            Step 1: Pick content you like the sound of.
+          </h1>
+        </div>
+      </header>
 
+      <div class="card-container to-show">
         <div
           class="card text-white bg-secondary mb-3 card-content"
           style="max-width: 18rem"
@@ -144,9 +147,26 @@
           <div class="card-body">
             <h5 class="card-title">LMAO.</h5>
             <p class="card-text">Let us show you something hilarious.</p>
-            <button type="button" class="btn btn-primary">API Call</button>
+            <button type="button" class="btn btn-primary">
+              <a href="#multimedia"></a>
+              API Call
+            </button>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- User Multimedia Selection -->
+    <div id="multimedia" class="multimedia mb-0 to-show">
+      <header>
+        <h1 class="hero multi-hero">
+          Step 2: Select a type of content to improve your mood.
+        </h1>
+      </header>
+      <div class="mm-container">
+        <a href="#" class="badge badge-success btn-lrg">Gif</a>
+        <a href="#" class="badge badge-danger btn-lrg">Video</a>
+        <a href="#" class="badge badge-warning btn-lrg">Article</a>
       </div>
     </div>
 
