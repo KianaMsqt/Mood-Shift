@@ -8,6 +8,7 @@ html {
 .hero {
     font-family: 'Happy Monkey', cursive;
     line-height: 1.5;
+
 }
 /* Jumbotron Styling */
 .jumbo-style  {
@@ -44,6 +45,11 @@ width: 90%;
 display: flex;
 align-items: center;
 justify-content: center;
+flex-wrap: wrap;
+}
+
+.card-body {
+    height: 200px;
 }
 
 .card-content {
@@ -55,11 +61,15 @@ justify-content: center;
     flex-direction: row;
 }
 
-
-/* TODO: @Shaz Please use a different selector to prevent applying changes on index file */
 .header{
     height:400px;
     background-image: url(background.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mood-tracker-page {
+    background-color: #c6ebfc;
 }
 
 #mood-tracker-heading {
@@ -72,4 +82,53 @@ justify-content: center;
 #mood-tracker-p-tag {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mood-tracker {
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    font-family: 'Happy Monkey', cursive;
+}
+
+.mood-tracker strong {
+    font-size: 1.2;
+}
+
+/* Add custom style for the buttons showing in the header */
+.header-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    
+}
+
+/* Badge Styling */
+
+.multi-hero{
+    color: #F7C331 !important;
+}
+
+.multimedia {
+   background:  #7d3cff 
+}
+
+.mm-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.btn-lrg {
+    font-size: 2rem;
+    margin: 50px;
+    color: #fff;
+}
+
+.btn-lrg:hover {
+    color: #333 !important;
 }

@@ -13,14 +13,16 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Mood Tracker Page</title>
   </head>
-  <body>
+  <body class="mood-tracker-page">
+    <a class="header-button btn btn-dark" href="index.html">Back to Home Page</a>
     <div class="jumbotron jumbotron-fluid header">
       <div class="container">
         <h1 id="mood-tracker-heading" class="display-4" style="font-size: 100px;">Mood Tracker</h1>
         <p id="mood-tracker-p-tag" class="lead">Look below to see your mood history</p>
       </div>
     </div>
-  </section>
+    <div id="displayTracker" class="mood-tracker"></div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -32,5 +34,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/mood-tracker.js"></script>
   </body>
 </html>
