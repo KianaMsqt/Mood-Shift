@@ -15,8 +15,8 @@
   </head>
   <body>
 
-    <a href="mood-tracker.html" title="Mood Tracker" class="header-button btn btn-dark" id="moodTracker">Mood Tracker</a>
-    
+    <a href="mood-tracker.html" title="Mood Tracker" class="header-button btn btn-dark">Mood Tracker</a>
+
     <!-- Jumbotron -->
     <div class="jumbotron jumbo-style mb-0">
       <div class="container">
@@ -73,12 +73,14 @@
 
     <!-- Content Cards -->
 
-    <div id="card-reveal" class="card-reveal">
-      <div class="card-container to-show">
-        <header>
-          <h1 class="hero card-hero">Pick some content based on your mood.</h1>
-        </header>
+    <div id="card-reveal" class="card-reveal mb-0 to-show-step-2">
+      <header>
+        <h1 class="hero card-hero">
+          Step 1: Pick content you like the sound of.
+        </h1>
+      </header>
 
+      <div class="card-container to-show">
         <div
           class="card text-white bg-secondary mb-3 card-content"
           style="max-width: 18rem"
@@ -88,7 +90,7 @@
           <div class="card-body">
             <h5 class="card-title">We can fix that!</h5>
             <p class="card-text">Here's some content to improve your mood!</p>
-            <button type="button" class="btn btn-primary">API Call</button>
+            <button type="button" class="btn btn-primary btn-result">Show Me!</button>
           </div>
         </div>
 
@@ -103,7 +105,7 @@
             <p class="card-text">
               We have content to keep the good vibes flowing!
             </p>
-            <button type="button" class="btn btn-primary">API Call</button>
+            <button type="button" class="btn btn-primary btn-result">Show Me!</button>
           </div>
         </div>
 
@@ -118,7 +120,7 @@
             <p class="card-text">
               A selection of content to turn things around.
             </p>
-            <button type="button" class="btn btn-primary">API Call</button>
+            <button type="button" class="btn btn-primary btn-result">Show Me!</button>
           </div>
         </div>
 
@@ -131,7 +133,7 @@
           <div class="card-body">
             <h5 class="card-title">A push in the right direction</h5>
             <p class="card-text">For when you need a little pick-me-up</p>
-            <button type="button" class="btn btn-primary">API Call</button>
+            <button type="button" class="btn btn-primary btn-result">Show Me!</button>
           </div>
         </div>
 
@@ -144,9 +146,23 @@
           <div class="card-body">
             <h5 class="card-title">LMAO.</h5>
             <p class="card-text">Let us show you something hilarious.</p>
-            <button type="button" class="btn btn-primary">API Call</button>
+            <button type="button" class="btn btn-primary btn-result">Show Me!</button>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- User Multimedia Selection -->
+    <div id="multimedia" class="multimedia mb-0 to-show-step-3">
+      <header>
+        <h1 class="hero multi-hero">
+          Step 2: Select a type of content to improve your mood.
+        </h1>
+      </header>
+      <div class="mm-container to-show">
+        <a href="audio.html" class="badge badge-success btn-lrg">Audio</a>
+        <a href="video.html" class="badge badge-danger btn-lrg">Video</a>
+        <a href="article.html" class="badge badge-warning btn-lrg">Article</a>
       </div>
     </div>
 

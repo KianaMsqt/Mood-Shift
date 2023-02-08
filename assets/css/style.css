@@ -8,7 +8,13 @@ html {
 .hero {
     font-family: 'Happy Monkey', cursive;
     line-height: 1.5;
+
 }
+
+h1 {
+    text-align: center;
+}
+
 /* Jumbotron Styling */
 .jumbo-style  {
     height: 100vh;
@@ -26,12 +32,23 @@ html {
 .btn-group {
     width: 90%;
     margin: auto;
-    }
+}
 
-    /* Card Styling */
+/* Card Styling */
+
+
+#articleContainer .card {
+    border: 3px dashed #c6ebfc;
+    padding: 2rem;
+    text-align: center;
+}
+
+#audioContainer .card {
+    border: none;
+}
 
 .card-reveal {
-    background: #333 !important;
+    background: #c6ebfc;
 }
 
 .card-hero {
@@ -44,14 +61,25 @@ width: 90%;
 display: flex;
 align-items: center;
 justify-content: center;
+flex-wrap: wrap;
+}
+
+.card-body {
+    height: 200px;
 }
 
 .card-content {
     margin: 0 20px;
 }
 
-.to-show {
+.to-show-step-2,
+.to-show-step-3 {
     display: none;
+    height: 100vh;
+}
+
+.to-show {
+    display: flex;
     flex-direction: row;
 }
 
@@ -60,6 +88,7 @@ justify-content: center;
     background-image: url(background.avif);
     background-size: cover;
     background-repeat: no-repeat;
+    text-align: center;
 }
 
 .mood-tracker-page {
@@ -95,4 +124,34 @@ justify-content: center;
     top: 15px;
     right: 15px;
     z-index: 2;
+    
+}
+
+/* Badge Styling */
+
+.multi-hero{
+    color: #F7C331 !important;
+}
+
+.multimedia {
+   background:  #7d3cff 
+}
+
+.mm-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.btn-lrg {
+    font-size: 2rem;
+    margin: 50px;
+    color: #fff;
+}
+
+.btn-lrg:hover {
+    color: #333 !important;
 }
