@@ -32,9 +32,12 @@ This is the url for the deployed site: https://kianamsqt.github.io/Mood-Shift
 
 The project has three collaborators with their github user names listed:
 
-Kiana Masqati: [@kianamsqt] (https://github.com/KianaMsqt)
-Sam Hendry: [@sdjhen] (https://github.com/sdjhen)
-Shaz Kawa: [@shazzy-kawa] (https://github.com/shazzy-kawa)
+Kiana Masqati: [@kianamsqt](https://github.com/KianaMsqt)
+
+Sam Hendry: [@sdjhen](https://github.com/sdjhen)
+
+Shaz Kawa: [@shazzy-kawa](https://github.com/shazzy-kawa)
+
 
 The project uses 3 third-party APIS:
 
@@ -42,7 +45,7 @@ YouTube API: https://www.googleapis.com/youtube/v3/search?part=snippet&q=+&type=
 
 Deezer API: https://api.deezer.com/search/track
 
-Wikipedia API: "https://en.wikipedia.org/w/api.php" 
+Wikipedia API: https://en.wikipedia.org/w/api.php
 
 
 ## Tests
