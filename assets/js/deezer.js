@@ -1,5 +1,4 @@
-
-var inputQuery = 'Guided Meditation';
+var inputQuery = "Guided Meditation";
 
 $(document).ready( function () {
 
