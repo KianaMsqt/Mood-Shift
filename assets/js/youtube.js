@@ -25,7 +25,7 @@ $( document ).ready( function() {
 
                 // Create HTML element and embed the video
                 var videoEmbed = '<iframe width="100%" height="315" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-                $("#videoContainer").append( '<div class="col-sm-6 mb-3"><div class="card h-100">' + videoEmbed + '<div class="card-body"><h5 class="card-title">' + videoTitle + '</h5></div></div></div>');
+                $("#videoContainer").append( '<div class="col-md-6 mb-3"><div class="card h-100">' + videoEmbed + '<div class="card-body"><h5 class="card-title">' + videoTitle + '</h5></div></div></div>');
 
             }
 

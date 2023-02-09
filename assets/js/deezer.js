@@ -20,7 +20,7 @@ $(document).ready( function () {
         track.id +
         '" width="250" height="250" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>';
 
-        $('#audioContainer').append('<div class="col-sm-4 mb-3"><div class="card h-100">' +
+        $('#audioContainer').append('<div class="col-lg-4 col-md-6 mb-3"><div class="card h-100">' +
                         audioEmbed +
                         '<h3>' +
                          track.title + 

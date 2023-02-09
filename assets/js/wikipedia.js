@@ -22,7 +22,7 @@ $( document ).ready( function() {
   
           // Create HTML element
           $('#articleContainer').append(
-            '<div class="col-sm-6 mb-3"><div class="card h-100"><h3><a href="https://en.wikipedia.org/wiki/' +
+            '<div class="col-md-6 mb-3"><div class="card h-100"><h3><a href="https://en.wikipedia.org/wiki/' +
               articleTitle +
               '" target="_blank">' +
               result.title +

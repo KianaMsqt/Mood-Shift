@@ -17,7 +17,7 @@ h1 {
 
 /* Jumbotron Styling */
 .jumbo-style  {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background: #8bf0ba ;
     color: #333;
@@ -56,12 +56,12 @@ h1 {
 }
 
 .card-container {
- margin: auto;
-width: 90%;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-wrap: wrap;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card-body {
@@ -75,7 +75,7 @@ flex-wrap: wrap;
 .to-show-step-2,
 .to-show-step-3 {
     display: none;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .to-show {
@@ -93,6 +93,10 @@ flex-wrap: wrap;
 
 .mood-tracker-page {
     background-color: #c6ebfc;
+}
+
+.mood-tracker-page h1 {
+    font-size: 100px;
 }
 
 #mood-tracker-heading {
@@ -154,4 +158,50 @@ flex-wrap: wrap;
 
 .btn-lrg:hover {
     color: #333 !important;
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .btn-group,
+    .mm-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .jumbo-style,
+    .to-show-step-2,
+    .to-show-step-3 {
+        height: auto;
+        min-height: 100vh;
+    }
+    .btn-lrg {
+        margin: 3px;
+    }
+    .mood-tracker-page h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .display-4,
+    h1,
+    .mood-tracker-page h1 {
+        font-size: 2rem;
+    }
+
+    .header {
+        height: 300px;
+    }
 }
