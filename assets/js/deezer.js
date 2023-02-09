@@ -1,5 +1,6 @@
 
-var inputQuery = 'Guided Meditation';
+// Get stored value for input query given from the buttons in second step
+var inputQuery = localStorage.getItem( 'inputQuery' );
 
 $(document).ready( function () {
 
