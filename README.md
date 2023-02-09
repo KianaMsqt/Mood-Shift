@@ -32,7 +32,7 @@ This is the url for the deployed site: https://kianamsqt.github.io/Mood-Shift
 
 The project has three collaborators with their github user names listed:
 
-Kiana Masqati: [@kianamsqt](https://github.com/KianaMsqt)
+Tayebe Kiana Masqati: [@kianamsqt](https://github.com/KianaMsqt)
 
 Sam Hendry: [@sdjhen](https://github.com/sdjhen)
 
