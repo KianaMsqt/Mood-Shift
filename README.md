@@ -19,8 +19,8 @@ The site is designed using bootstap. It also calls multiple third-party APIs. Th
 
 When the page is opened, you are prompted with a question about how you are feeling today. After the user has selected the button representing their current mood from the options given, the data is stored. This data can be accessed in the navigation bar, which leads to another HTML page. This page stores all the users inputs and records the date the data was selected to work as a mood tracker. When the buttons on the index page are double clicked, the page moves down to the next question, which provides a series of prompts asking the user how they would like to feel. This will determine whether the site brings forward happy or relaxing content to support the user in shifting their mood. Lastly, the last question asks the user what sort of content they would like to see. The options provided is audio, video or article. When the button is clicked, the API is called and the correct media content is brought forward and displayed on the site. The following images show the functionality of the page. 
 
-![First page](assets/css/mood-shift-1.png)
-![Mood Tracker Page](assets/css/moodtracker.png)
+![First page](assets/image/mood-shift-1.png)
+![Mood Tracker Page](assets/image/moodtracker.png)
 
 This is the url for the GitHib repository: https://github.com/KianaMsqt/Mood-Shift.git
 This is the url for the deployed site: https://kianamsqt.github.io/Mood-Shift/index.html 
