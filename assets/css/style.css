@@ -85,7 +85,7 @@ flex-wrap: wrap;
 
 .header{
     height:400px;
-    background-image: url(background.avif);
+    background-image: url( ../image/background.avif);
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
